@@ -54,7 +54,7 @@ function fetchFiles () {
         body = new FormData(compareFiles)
         const url = button.getAttribute('action');
         headers['enctype'] = 'multipart/form-data'
-        const response = await fetch(`http://localhost:3000/files/${url}`, {
+        const response = await fetch(`http://140.238.211.48:3000/files/${url}`, {
           method,
           body,
           headers
