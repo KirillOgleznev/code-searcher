@@ -14,7 +14,7 @@ function fetchText () {
       })
       const url = button.getAttribute('action');
       headers['Content-Type'] = 'application/json'
-      const response = await fetch(`http://localhost:3000/compare/${url}`, {
+      const response = await fetch(`http://140.238.211.48:3000/compare/${url}`, {
         method,
         body,
         headers
