@@ -55,8 +55,10 @@ if __name__ == '__main__':
     repoID = '28457823'
     url = f"https://api.github.com/repositories/{repoID}?&" + GITHUB_TOKEN
     json = requests.get(url).json()
-    git.Repo.clone_from(json['clone_url'], '/home/main/PycharmProjects/GitParser/' + repoID)
-
+    try:
+        git.Repo.clone_from(json['clone_url'], '/home/main/PycharmProjects/GitParser/' + repoID)
+    except:
+        pass
     data = list_is_direct('/home/main/PycharmProjects/GitParser/' + repoID)
     data = genShingle(data)
 
